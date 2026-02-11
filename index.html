@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xüsusi Məktub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="intro-overlay">
+        <div class="intro-box">
+            <div class="notification-icon">💌</div>
+            <h1>SƏNƏ XÜSUSİ BİR MEKTUB GÖNDƏRİLDİ!</h1>
+            <p>Bu məktuba çatmaq asan deyil...</p>
+            <p style="font-size: 0.9rem; margin-top: 5px;">Sualları düzgün cavabla, şifrəni aç və məktubu oxu!</p>
+            <button class="start-btn" onclick="startGame()">BAŞLA</button>
+        </div>
+    </div>
+
+    <div class="main-container" id="game-phase">
+        <header class="password-header">
+            <h1 class="title">Şifrəni Həll Et — Məktubu Aç 💌</h1>
+            <div class="password-display">
+                <div class="word-group" id="word-1"></div>
+                <div class="spacer"></div>
+                <div class="word-group" id="word-2"></div>
+            </div>
+            <p class="subtitle">Sualları cavabla, yuxarıdakı qutulara nömrələri yerləşdir!</p>
+            <p class="subtitle" style="margin-top:8px; font-weight:600;">İpucu: sevimli ev yeməyimiz</p>
+        </header>
+
+        <div class="quiz-layout">
+            <div class="col" id="left-column"></div>
+            <div class="col" id="right-column"></div>
+        </div>
+    </div>
+
+    <div class="letter-container" id="letter-phase">
+        <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="letter-paper" onclick="readPaper(event)">
+                    <div class="paper-content">
+                        <h2>Nurayım birdənəm,</h2>
+                        <p>
+                            Nurayım birdənəm səni tanımağıma, həyatımda olmağına o qədər çox sevinirəm ki. Seni o qədər çox sevirəmki sənindeki yerini, dəyərini özüm belə qısqanıram bəzən.
+                            <br><br>
+                            Bilirəm bəzən səni əsəbləşdirirəm, incidirəm, istədiyin kimi davranmıram. Amma mən sənin incinməyini də, əsəbləşməyini də istəmərəm heç vaxt — həmişə xoşbəxt olmağını, gülməyini istəyirəm. Gülmək sənə çox yaraşır.
+                            <br><br>
+                            Gözəl sevgilim, mən hər gün səni daha çox sevirəm, daha çox bağlanıram sənə. Həmişə yanımda olmağını istəyirəm. Çiçəyim, gözəlim, yaxşı ki varsan — həyatımdasan, yaxşı ki səni sevirəm.
+                            <br><br>
+                            İlk Sevgililər Günümüz Mübarək. Ürəyim, sonsuzadək birlikdə olaq. ❤️
+                            <br>
+                            <span class="close-hint">(Bağlamaq üçün klikləyin)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <img src="foto1.jpg" class="photo p1" alt="Photo 1">
+                <img src="foto2.jpg" class="photo p2" alt="Photo 2">
+                <img src="foto3.jpg" class="photo p3" alt="Photo 3">
+                <img src="foto4.jpg" class="photo p4" alt="Photo 4">
+                <img src="foto5.jpg" class="photo p5" alt="Photo 5">
+                <img src="foto6.jpg" class="photo p6" alt="Photo 6">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
